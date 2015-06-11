@@ -7,7 +7,7 @@ A pandoc [markdown] reader plugin for [pelican]
 Requirements
 ------------
 
-  - [pandoc] in $PATH
+  - [pandoc], ideally in $PATH but this is not mandatory.
 
 
 Installation
@@ -37,6 +37,15 @@ PANDOC_EXTENSIONS parameter.
       '-citations'
     ]
 
+In case [pandoc] is not in $PATH it is possible to provide the full path:
+
+    PANDOC_EXEC = '/usr/local/bin/pandoc'
+
+This parameter can also be used to call a variant of [pandoc] such as [scholdoc]:
+
+    PANDOC_EXEC = 'scholdoc'
+
+
 Contributing
 ------------
 
@@ -50,3 +59,4 @@ Contributing
 [markdown]: http://daringfireball.net/projects/markdown/
 [pandoc]: http://johnmacfarlane.net/pandoc/
 [pelican]: http://getpelican.com
+[scholdoc]: http://scholdoc.scholarlymarkdown.com/
